@@ -1,6 +1,5 @@
 <template>
     <iframe
-        ref="horizon-frame"
         src="/horizon"
         class="w-full"
         frameborder="0"
@@ -10,7 +9,7 @@
 
 <script>
 export default {
-    mounted() {
+    created: function() {
         //
     },
 }

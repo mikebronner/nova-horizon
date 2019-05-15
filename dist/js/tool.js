@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(11);
+module.exports = __webpack_require__(15);
 
 
 /***/ }),
@@ -79,24 +79,28 @@ Nova.booting(function (Vue, router, store) {
     router.addRoutes([{
         name: 'nova-horizon',
         path: '/nova-horizon',
-        component: __webpack_require__(2)
+        component: __webpack_require__(6)
     }]);
 });
 
 /***/ }),
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(3)
+  __webpack_require__(7)
 }
-var normalizeComponent = __webpack_require__(8)
+var normalizeComponent = __webpack_require__(12)
 /* script */
-var __vue_script__ = __webpack_require__(9)
+var __vue_script__ = __webpack_require__(13)
 /* template */
-var __vue_template__ = __webpack_require__(10)
+var __vue_template__ = __webpack_require__(14)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -135,17 +139,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 3 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(4);
+var content = __webpack_require__(8);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(6)("6e5db1d0", content, false, {});
+var update = __webpack_require__(10)("6e5db1d0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -161,10 +165,10 @@ if(false) {
 }
 
 /***/ }),
-/* 4 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(false);
+exports = module.exports = __webpack_require__(9)(false);
 // imports
 
 
@@ -175,7 +179,7 @@ exports.push([module.i, "\ndiv.px-view.py-view.mx-auto,\ndiv.px-view.py-view.mx-
 
 
 /***/ }),
-/* 5 */
+/* 9 */
 /***/ (function(module, exports) {
 
 /*
@@ -257,7 +261,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 6 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -276,7 +280,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(7)
+var listToStyles = __webpack_require__(11)
 
 /*
 type StyleObject = {
@@ -485,7 +489,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 7 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /**
@@ -518,7 +522,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 8 */
+/* 12 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -627,7 +631,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 9 */
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -641,16 +645,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
+    created: function created() {
         //
     }
 });
 
 /***/ }),
-/* 10 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -658,7 +661,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("iframe", {
-    ref: "horizon-frame",
     staticClass: "w-full",
     attrs: { src: "/horizon", frameborder: "0", scrolling: "auto" }
   })
@@ -674,7 +676,7 @@ if (false) {
 }
 
 /***/ }),
-/* 11 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
