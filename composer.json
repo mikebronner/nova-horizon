@@ -7,17 +7,19 @@
     ],
     "license": "MIT",
     "require": {
+        "laravel/framework": "5.8.*",
+        "laravel/horizon": "*",
         "php": ">=7.1.0"
     },
     "autoload": {
         "psr-4": {
-            "Genealabs\\NovaHorizon\\": "src/"
+            "GeneaLabs\\NovaHorizon\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Genealabs\\NovaHorizon\\ToolServiceProvider"
+                "GeneaLabs\\NovaHorizon\\ToolServiceProvider"
             ]
         }
     },

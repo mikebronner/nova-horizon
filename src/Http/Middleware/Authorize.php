@@ -1,9 +1,7 @@
-<?php
+<?php namespace GeneaLabs\NovaHorizon\Http\Middleware;
 
-namespace Genealabs\NovaHorizon\Http\Middleware;
-
+use GeneaLabs\NovaHorizon\NovaHorizon;
 use Laravel\Nova\Nova;
-use Genealabs\NovaHorizon\NovaHorizon;
 
 class Authorize
 {

@@ -1,6 +1,4 @@
-<?php
-
-namespace Genealabs\NovaHorizon;
+<?php namespace GeneaLabs\NovaHorizon;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
