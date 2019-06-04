@@ -1,3 +1,11 @@
+<script>
+export default {
+    created: function() {
+        //
+    },
+};
+</script>
+
 <template>
     <iframe
         src="/horizon"
@@ -7,22 +15,9 @@
     ></iframe>
 </template>
 
-<script>
-export default {
-    created: function() {
-        //
-    },
-};
-</script>
-
-<style>
-    div.px-view.py-view.mx-auto,
-    div.px-view.py-view.mx-auto > div,
-    div.px-view.py-view.mx-auto > div > iframe {
-        height: 100%;
-    }
-
-    div.px-view.py-view.mx-auto {
-        padding-top: 0;
+<style scoped lang="scss">
+    iframe {
+        margin-top: -50px;
+        height: 100vh;
     }
 </style>
