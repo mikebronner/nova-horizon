@@ -38,8 +38,8 @@ class ToolServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova', Authorize::class])
-                ->prefix('nova-vendor/nova-horizon')
-                ->group(__DIR__.'/../routes/api.php');
+            ->prefix('genealabs/nova-horizon')
+            ->group(__DIR__ . '/../routes/api.php');
     }
 
     /**

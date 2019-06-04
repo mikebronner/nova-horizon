@@ -1,14 +1,38 @@
 <script>
 export default {
-    created: function() {
-        //
+    data: function () {
+        return {
+            path: "",
+        };
     },
-};
+
+    created() {
+        this.getPath();
+    },
+
+    computed: {
+        horizonPath: function () {
+            return ("/" + this.path)
+                .replace("\/\/", "\/");
+        },
+    },
+
+    methods: {
+        getPath: function () {
+            var self = this;
+
+            Nova.request().get("/genealabs/nova-horizon/path")
+                .then(function (response) {
+                    self.path = response.data;
+                });
+        },
+    },
+}
 </script>
 
 <template>
     <iframe
-        src="/horizon"
+        :src="horizonPath"
         class="w-full"
         frameborder="0"
         scrolling="auto"
