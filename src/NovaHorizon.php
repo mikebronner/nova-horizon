@@ -25,4 +25,14 @@ class NovaHorizon extends Tool
     {
         return view('nova-horizon::navigation');
     }
+
+    /**
+     * Get the Laravel Horizon Path
+     * 
+     * @return string
+     */
+    public function resolveHorizonPath(): string
+    {
+        return config("horizon.path");
+    }
 }
