@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use GeneaLabs\NovaHorizon\Http\Controllers\Api\HorizonPathController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/path', function () {
-    return config("horizon.path");
-});
+Route::get('/path', HorizonPathController::class);
