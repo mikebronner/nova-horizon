@@ -1,7 +1,8 @@
 # Horizon Integration for Nova
 
 ## Installation
-1. ```sh
+1. 
+  ```sh
   composer require genealabs/nova-horizon
   ```
 2. Add the tool to your Nova provider:
