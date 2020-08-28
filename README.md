@@ -6,7 +6,7 @@
     composer require genealabs/nova-horizon
     ```
 
-2. Add the tool to your Nova provider:
+2. Add the tool to your Nova provider `app\Providers\NovaServiceProvider.php`:
     ```php
     <?php
 
