@@ -1,5 +1,13 @@
 # Horizon Integration for Nova
 
+## Supporting This Package
+
+This is an MIT-licensed open source project with its ongoing development made possible by the support of the community. If you'd like to support this, and our other packages, please consider sponsoring us via the button above.
+
+We thank the following sponsors for their generosity, please take a moment to check them out:
+
+- [LIX](https://lix-it.com)
+
 ## Installation
 1. Install the package:
     ```sh
