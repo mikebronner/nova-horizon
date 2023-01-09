@@ -1,30 +1,33 @@
 <script>
 export default {
-    data: function () {
+    data: function()
+    {
         return {
-            path: "",
-        };
+            path: '',
+        }
     },
 
-    created() {
-        this.getPath();
+    created()
+    {
+        this.getPath()
     },
 
     computed: {
-        horizonPath: function () {
-            return ("/" + this.path)
-                .replace("\/\/", "\/");
+        horizonPath: function()
+        {
+            return ('/' + this.path).replace('\/\/', '\/')
         },
     },
 
     methods: {
-        getPath: function () {
-            var self = this;
+        getPath: function()
+        {
+            let self = this
 
-            Nova.request().get("/genealabs/nova-horizon/path")
-                .then(function (response) {
-                    self.path = response.data;
-                });
+            Nova.request().get('/genealabs/nova-horizon/path').then(function(response)
+            {
+                self.path = response.data
+            })
         },
     },
 }
@@ -40,8 +43,8 @@ export default {
 </template>
 
 <style scoped lang="scss">
-    iframe {
-        margin-top: -50px;
-        height: 100vh;
-    }
+iframe {
+    margin-top: -50px;
+    height: 100vh;
+}
 </style>

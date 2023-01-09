@@ -1,5 +1,6 @@
 <?php namespace GeneaLabs\NovaHorizon;
 
+use Illuminate\View\View;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
@@ -12,16 +13,16 @@ class NovaHorizon extends Tool
      */
     public function boot()
     {
-        Nova::script('nova-horizon', __DIR__.'/../dist/js/tool.js');
-        Nova::style('nova-horizon', __DIR__.'/../dist/css/tool.css');
+        Nova::script('nova-horizon', __DIR__ . '/../dist/js/tool.js');
+        Nova::style('nova-horizon', __DIR__ . '/../dist/css/tool.css');
     }
 
     /**
      * Build the view that renders the navigation links for the tool.
      *
-     * @return \Illuminate\View\View
+     * @return View
      */
-    public function renderNavigation()
+    public function renderNavigation(): View
     {
         return view('nova-horizon::navigation');
     }

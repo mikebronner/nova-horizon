@@ -1,4 +1,5 @@
-Nova.booting((Vue, router, store) => {
+Nova.booting((Vue, router, store) =>
+{
     router.addRoutes([
         {
             name: 'nova-horizon',

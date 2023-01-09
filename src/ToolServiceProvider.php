@@ -15,7 +15,7 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-horizon');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'nova-horizon');
 
         $this->app->booted(function () {
             $this->routes();
