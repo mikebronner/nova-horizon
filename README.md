@@ -14,7 +14,7 @@ We thank the following sponsors for their generosity, please take a moment to ch
     composer require genealabs/nova-horizon
     ```
 
-2. Add the tool to your Nova provider `app\Providers\NovaServiceProvider.php`:
+2. Add the tool to your Nova service provider `app\Providers\NovaServiceProvider.php`:
     ```php
     <?php
 
@@ -40,3 +40,9 @@ We thank the following sponsors for their generosity, please take a moment to ch
 
     ```
   
+3. When using customized Nova main sidebar menu (https://nova.laravel.com/docs/4.0/customization/menus.html#customizing-the-main-menu), add menu section to your Nova service provider `app\Providers\NovaServiceProvider.php`:
+   ```php
+    MenuSection::make('Horizon')
+        ->path('/nova-horizon')
+        ->icon('server')
+    ```
