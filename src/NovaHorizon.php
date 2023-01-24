@@ -1,5 +1,7 @@
 <?php namespace GeneaLabs\NovaHorizon;
 
+use Illuminate\Http\Request;
+use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
@@ -12,17 +14,21 @@ class NovaHorizon extends Tool
      */
     public function boot()
     {
-        Nova::script('nova-horizon', __DIR__.'/../dist/js/tool.js');
-        Nova::style('nova-horizon', __DIR__.'/../dist/css/tool.css');
+        Nova::script('nova-horizon', __DIR__ . '/../dist/js/tool.js');
+        Nova::style('nova-horizon', __DIR__ . '/../dist/css/tool.css');
     }
 
     /**
-     * Build the view that renders the navigation links for the tool.
+     * Build the menu that renders the navigation links for the tool.
      *
-     * @return \Illuminate\View\View
+     * @param Request $request
+     *
+     * @return mixed
      */
-    public function renderNavigation()
+    public function menu(Request $request)
     {
-        return view('nova-horizon::navigation');
+        return MenuSection::make('Horizon')
+            ->path('/nova-horizon')
+            ->icon('server');
     }
 }
