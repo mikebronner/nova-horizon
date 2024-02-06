@@ -3,7 +3,7 @@
 use Closure;
 use GeneaLabs\NovaHorizon\NovaHorizon;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
